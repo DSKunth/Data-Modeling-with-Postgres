@@ -211,7 +211,7 @@ GROUP BY songplays.user_id, first_name, last_name, songplays.level, users.gender
 ORDER BY songplay_count DESC LIMIT 10;
 ```
 
-![query1.jpg](attachment:query1.jpg)
+![](images/query1.jpg)
 
 **Sample Query 2 - Which day of the week the users are most active?**
 
@@ -221,7 +221,7 @@ ORDER BY songplay_count DESC LIMIT 10;
 GROUP BY weekday ORDER BY songplay_count DESC;
 ```
 
-![query2.jpg](attachment:query2.jpg)
+![](images/query2.jpg)
 
 **Sample Query 3 - How many users are free and how many are paid?**
 
@@ -230,7 +230,7 @@ GROUP BY weekday ORDER BY songplay_count DESC;
 %sql SELECT level, COUNT(*) num_users FROM users GROUP bY level;
 ```
 
-![query3.jpg](attachment:query3.jpg)
+![](images/query3.jpg)
 
 **Sample Query 4 - What is the average number of songplays the top 10 most active users listen to?**
 
@@ -243,7 +243,7 @@ FROM (SELECT songplays.user_id, first_name, last_name, COUNT(songplay_id) as son
 GROUP BY user_id, first_name, last_name ORDER BY avg_songplay_count DESC LIMIT 10;
 ```
 
-![query4.jpg](attachment:query4.jpg)
+![](images/query4.jpg)
 
 
 ```python
