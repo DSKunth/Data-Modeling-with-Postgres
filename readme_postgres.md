@@ -59,7 +59,7 @@ The folowing project files are created:
 2. Run create_tables.py to create the database and tables.
 
     - launch the terminal and run the script as below: 
-            - python create_tables.py
+            python create_tables.py
             
 3. Run test.ipynb to confirm the creation of the tables with the correct columns. Make sure to click "Restart kernel" to close the connection to the database after running this notebook. Otherwise, the codes in create_tables.py, etl.py, or etl.ipynb files won't run since multiple connections to the same database (in this case, sparkifydb) is not possible.
 
@@ -73,7 +73,7 @@ The folowing project files are created:
 6. Run etl.py to process the datasets. Remember to run create_tables.py before running etl.py to reset the tables. Run test.ipynb to confirm that the records were successfully inserted into each table.
 
     - launch the terminal and run the script as below: 
-            - python etl.py
+            python etl.py
 
 ## Database Schema
 
@@ -145,9 +145,9 @@ The etl.ipynb notebook details the ETL process for each of the tables.
     - Implement the time_table_insert query in sql_queries.py
     - Run the code below to insert records for the timestamps in this log file into the time table
     
-        `for i, row in time_df.iterrows():
+        ```for i, row in time_df.iterrows():
             cur.execute(time_table_insert, list(row))
-            conn.commit()`
+            conn.commit()```
     
 **B. ETL for users table**
 
@@ -160,9 +160,9 @@ The etl.ipynb notebook details the ETL process for each of the tables.
     - Implement the user_table_insert query in sql_queries.py
     - Run the code below to insert records for the users in this log file into the users table
     
-        `for i, row in user_df.iterrows():
+        ```for i, row in user_df.iterrows():
             cur.execute(user_table_insert, row)
-            conn.commit()`
+            conn.commit()```
     
 **C. ETL for songplays table**
 
@@ -177,7 +177,7 @@ This one is a little more complicated since information from the songs table, ar
     - Implement the songplay_table_insert query 
     - Run the codes below to insert records for the songplay actions in this log file into the songplays table
     
-        ``for index, row in df.iterrows():
+        ```for index, row in df.iterrows():
 
             cur.execute(song_select, (row.song, row.artist, row.length))
             results = cur.fetchone()
@@ -189,7 +189,7 @@ This one is a little more complicated since information from the songs table, ar
 
             songplay_data = (pd.to_datetime(row.ts, unit = 'ms'), row.userId, row.level, songid, artistid, row.sessionId, row.location, row.userAgent)
             cur.execute(songplay_table_insert, songplay_data)
-            conn.commit()``
+            conn.commit()```
             
 The ETL pipeline is then built through etl.py script.
 
