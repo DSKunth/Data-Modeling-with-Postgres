@@ -79,7 +79,7 @@ The folowing project files are created:
 
 The following image is the database schema created, a *star schema* which simplifies the queries and fast aggregations can be performed. It shows the relationship between the fact table (songplays) and four dimension tables as well as the data types used for each columns.
 
-![database%20schema.jpg](attachment:database%20schema.jpg)
+![](images/database%20schema.jpg)
 
 ## ETL (Extract, Transform. Load) Process
 
