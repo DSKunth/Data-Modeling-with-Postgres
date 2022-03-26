@@ -81,7 +81,7 @@ The following image is the database schema created, a *star schema* which simpli
 
 ![](images/database%20schema.jpg)
 
-## ETL (Extract, Transform. Load) Process
+## ETL (Extract, Transform, Load) Process
 
 ETL is the approach that will be used for describing data flows. ETL is the more traditional approach for warehousing and smaller-scale analytics but has also become common with big data projects. In ETL, data is transformed before loading into the database storage.
 
