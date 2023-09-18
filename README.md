@@ -16,7 +16,7 @@ One of the goals is to be able to test the database and ETL pipeline by running 
 
 There are two datasets for this project: song dataset and log dataset.
 * Song Dataset
-    - The song dataset is a subset of real data from the *Million Song Dataset*. The *Million Song Dataset* is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. Each file is in JSON format and contains metadata about a song and the artist of that song. 
+    - The song dataset is a subset of real data from the *Million Song Dataset*. The *Million Song Dataset* is a freely available collection of audio features and metadata for a million contemporary popular music tracks. Each file is in JSON format and contains metadata about a song and the artist of that song. 
 
 
 * Log Dataset
@@ -25,7 +25,7 @@ There are two datasets for this project: song dataset and log dataset.
 
 ## Project Files
 
-The folowing project files are created:
+The following project files are created:
 
 1.	**test.ipynb** displays the first few rows of each table. This is to check the database that the records are loaded successfully.
 
@@ -77,7 +77,7 @@ The folowing project files are created:
 
 ## Database Schema
 
-The following image is the database schema created, a *star schema* which simplifies the queries and fast aggregations can be performed. It shows the relationship between the fact table (songplays) and four dimension tables as well as the data types used for each columns.
+The following image is the database schema created, a *star schema* which simplifies the queries and fast aggregations can be performed. It shows the relationship between the fact table (songplays) and four dimension tables as well as the data types used for each column.
 
 ![](images/database%20schema.jpg)
 
@@ -201,7 +201,7 @@ Based on the database created, the values extracted for songplays table contain 
 
 Here are some of the queries performed using the new database:
 
-**Sample Query 1 - In terms of number of songplays, which users are the most active, paid or free users, what gender?**
+**Sample Query 1 - In terms of the number of songplays, which users are the most active, paid or free users, and what gender?**
 
 
 ```python
